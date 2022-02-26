@@ -42,7 +42,7 @@ public class MathTest {
 
     @Test
     public void addIncludingMinusTestCase() {
-        assertEquals("-2", math.includingMinus("-5", "3"));
+        assertEquals("Error, negative number occurred", math.add("-5", "3"));
 
     }
 

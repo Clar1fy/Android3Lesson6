@@ -32,5 +32,7 @@ public class MainActivityTest {
     public void simpleIsFieldEmptyTest() {
         onView(withId(R.id.et_first)).perform().check(matches((withText(""))));
         onView(withId(R.id.et_second)).perform().check(matches((withText(""))));
+        onView(withId(R.id.btn_ok)).perform(click());
+        onView(withId(R.id.tv_result)).check(matches(withText("")));
     }
 }
