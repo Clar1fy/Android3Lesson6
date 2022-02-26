@@ -55,12 +55,13 @@ public class Math {
 
 
         if (c) {
-            return String.valueOf(a + b);
+            return "Error,special characters have been detected";
 
         }
+        return String.valueOf(a+b);
 
 
-        return "Error,special characters have been detected";
+
     }
 
 
