@@ -8,7 +8,7 @@ public class Math {
         int num1 = Integer.parseInt(a.trim());
         int num2 = Integer.parseInt(b.trim());
         if (num1 < 0 || num2 < 0) {
-            return "An error occured. You have tried to save ";
+            return "An error occurred. You have tried to save ";
         }
         return String.valueOf(num1 + num2);
     }
@@ -17,7 +17,7 @@ public class Math {
         int num1 = Integer.parseInt(a.trim());
         int num2 = Integer.parseInt(b.trim());
         if (num1 < 0 || num2 < 0) {
-            return "An error occured. You have tried to divie by zero ";
+            return "An error occurred. You have tried to divide by zero ";
         }
         return String.valueOf(num1 - num2);
 
@@ -43,7 +43,7 @@ public class Math {
         if (num1 < 0 || num2 < 0) {
             System.out.println("An error occurred. You have tried to divide by zero ");
         }
-        return String.valueOf(0);
+        return "Error,you can't divide by zero";
 
     }
 
@@ -68,7 +68,7 @@ public class Math {
         } else {
             System.out.println("there is no special characters in these strings");
         }
-        return a + b;
+        return "Error,special characters have been detected";
     }
 
 

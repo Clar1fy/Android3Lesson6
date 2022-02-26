@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         binding.btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Mathematics mathematics = new Mathematics();
+                Math math = new Math();
                 String num1 = binding.etFirst.getText().toString();
                 String num2 = binding.etSecond.getText().toString();
-                String result = mathematics.add(num1, num2);
+                String result = math.add(num1, num2);
                 binding.tvResult.setText(result);
 
             }

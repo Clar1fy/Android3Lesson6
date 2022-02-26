@@ -48,12 +48,12 @@ public class MathTest {
 
     @Test
     public void isDividedByZero() {
-        assertEquals("0", math.dividedByZero("2", "0"));
+        assertEquals("Error,you can't divide by zero", math.dividedByZero("2", "0"));
     }
 
     @Test
     public void doesIncludeSpecialCharacters() {
-        assertEquals("!@#@!#@!21312456", math.areSymbolsIncluded("!@#@!#@!21312", "456"));
+        assertEquals("Error,special characters have been detected", math.areSymbolsIncluded("!@#@!#@!21312", "456"));
     }
 
     @After
