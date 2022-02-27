@@ -6,9 +6,12 @@ import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.Matchers.isEmptyString;
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+import com.example.android3lessson6.databinding.ActivityMainBinding;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -22,17 +25,12 @@ public class MainActivityTest {
 
     @Test
     public void simpleAddTest() {
+        onView(withId(R.id.et_first)).perform().check(matches((withText(isEmptyString()))));
         onView(withId(R.id.et_first)).perform(typeText("12"));
+        onView(withId(R.id.et_second)).perform().check(matches((withText(isEmptyString()))));
         onView(withId(R.id.et_second)).perform(typeText("17"));
         onView(withId(R.id.btn_ok)).perform(click());
         onView(withId(R.id.tv_result)).check(matches(withText("29")));
     }
 
-    @Test
-    public void simpleIsFieldEmptyTest() {
-        onView(withId(R.id.et_first)).perform().check(matches((withText(""))));
-        onView(withId(R.id.et_second)).perform().check(matches((withText(""))));
-        onView(withId(R.id.btn_ok)).perform(click());
-        onView(withId(R.id.tv_result)).check(matches(withText("")));
-    }
 }
